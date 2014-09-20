@@ -10,13 +10,45 @@ namespace _1DV402.S1._1.L01A
     {
         static void Main(string[] args)
         {
-            string M;
-            M = "hej";
-            Console.Write((double)(1 / 3));
-            Console.WriteLine(M);
-            int[] numbers = new int[2];
-            Console.WriteLine(numbers[1]);
-            M = Console.ReadLine();
+            double total;
+            
+            int betalat;
+            
+            while(true)
+            {
+
+                try
+                {
+
+
+                    // här matar man in totalsumma 
+                    Console.Write("Ange totalsumma:");
+                    total = double.Parse(Console.ReadLine());
+
+                    if (total < 0.50)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Suman är för liten, köp genomförs inte");
+                        Console.ResetColor();
+                    }
+                  
+                    else
+                    {
+                        break;
+                    }
+
+                }
+                catch
+                {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.WriteLine("det är inte en siffra");
+                    Console.ResetColor();
+                }
+            
+            }
+
+
+   
         }
     }
 }
