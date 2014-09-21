@@ -84,29 +84,103 @@ namespace _1DV402.S1._1.L01A
 
             }
 
+
+
+            SubTotal = (uint)Math.Round(total);// avrundar total suman med decimal till närmaste heltal        
+            roundingOffAmount = SubTotal - total;
+
+            tillbaka = betalat - (int)total;// räknar ut hur mycket pengar man ska få tillbaks 
+
             Console.WriteLine();
             
             Console.WriteLine("---------------------------");
-            
             Console.WriteLine("Totalt: " + total);
-           
-            SubTotal = (uint)Math.Round(total); 
-            roundingOffAmount = SubTotal - total; 
             Console.WriteLine("öresavrundning: " + roundingOffAmount);
-
-            tillbaka = betalat - (int)total;
             Console.WriteLine("Att Betala: " + SubTotal);
             Console.WriteLine("Kontant: " + betalat);
             Console.WriteLine("tillbaka: " + tillbaka);
-           
             Console.WriteLine("---------------------------");
            
             Console.WriteLine();
 
-            resultat = tillbaka / 500;
+            resultat = tillbaka / 500; // 
 
-            total = double.Parse(Console.ReadLine());
-   
+            if (resultat > 0)
+            {
+                Console.WriteLine("Antal 500 lappar: " + resultat);
+                tillbaka = tillbaka * 500;
+            }
+
+            resultat = tillbaka / 100;
+
+            if (resultat > 0)
+            {
+                Console.WriteLine("Antal 100 lappar: " + resultat);
+                tillbaka = tillbaka * 100;
+            }
+
+            resultat = tillbaka / 50;
+
+            if (resultat > 0)
+            {
+                Console.WriteLine("Antal 50 lappar: " + resultat);
+                tillbaka = tillbaka * 50;
+            }
+
+            resultat = tillbaka / 20;
+
+            if (resultat > 0)
+            {
+                Console.WriteLine("Antal 20 lappar: " + resultat);
+                tillbaka = tillbaka * 20;
+            }
+
+            resultat = tillbaka / 5;
+
+            if (resultat > 0)
+            {
+                Console.WriteLine("Antal 5 kronor: " + resultat);
+                tillbaka = tillbaka * 5;
+            }
+
+            resultat = tillbaka / 1;
+
+            if (resultat > 0)
+            {
+                Console.WriteLine("Antal 1 kronor: " + resultat);
+                tillbaka = tillbaka * 1;
+            }
+
+            int slut = 0;
+
+            while (true)//stopar programmet och bär dig matat in 1 för att avsluta den  
+            {
+                try
+                {
+
+                    if (slut == 0 || slut >= 2)
+                    {
+                        Console.WriteLine("skriv in 1 för att avsluta");
+                        slut = int.Parse(Console.ReadLine());
+                    }
+
+                    else
+                    {
+                        break;
+                    }
+
+                }
+                catch
+                {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.WriteLine("fel, skriv in 1 för att avsluta");
+                    Console.ResetColor();
+                }
+
+            }
+
+           
+
         }
     }
 }
