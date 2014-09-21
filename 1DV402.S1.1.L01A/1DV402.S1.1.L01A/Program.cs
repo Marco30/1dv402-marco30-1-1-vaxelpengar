@@ -14,6 +14,14 @@ namespace _1DV402.S1._1.L01A
             
             int betalat;
 
+            uint SubTotal;
+
+            int tillbaka;
+
+            int resultat;
+
+            double roundingOffAmount;
+
             while (true) //loop startat och loppar förevigt om inte den avlutas med break; 
             {
 
@@ -76,9 +84,28 @@ namespace _1DV402.S1._1.L01A
 
             }
 
-            Console.WriteLine(betalat);
-            Console.WriteLine(total);
-            betalat = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            
+            Console.WriteLine("---------------------------");
+            
+            Console.WriteLine("Totalt: " + total);
+           
+            SubTotal = (uint)Math.Round(total); 
+            roundingOffAmount = SubTotal - total; 
+            Console.WriteLine("öresavrundning: " + roundingOffAmount);
+
+            tillbaka = betalat - (int)total;
+            Console.WriteLine("Att Betala: " + SubTotal);
+            Console.WriteLine("Kontant: " + betalat);
+            Console.WriteLine("tillbaka: " + tillbaka);
+           
+            Console.WriteLine("---------------------------");
+           
+            Console.WriteLine();
+
+            resultat = tillbaka / 500;
+
+            total = double.Parse(Console.ReadLine());
    
         }
     }
