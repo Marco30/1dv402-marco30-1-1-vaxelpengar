@@ -95,11 +95,11 @@ namespace _1DV402.S1._1.L01A
 
             //presenterar allt info om transaktionen  
             Console.WriteLine("---------------------------");
-            Console.WriteLine("Totalt: " + total);
-            Console.WriteLine("öresavrundning: " + roundingOffAmount);
-            Console.WriteLine("Att Betala: " + SubTotal);
-            Console.WriteLine("Kontant: " + betalat);
-            Console.WriteLine("tillbaka: " + tillbaka);
+            Console.WriteLine("Totalt           : {0}", total);
+            Console.WriteLine("öresavrundning   : {0:f2}", roundingOffAmount);
+            Console.WriteLine("Att Betala       : {0}", SubTotal);
+            Console.WriteLine("Kontant          : {0}", betalat);
+            Console.WriteLine("tillbaka         : {0}", tillbaka);
             Console.WriteLine("---------------------------");
 
             Console.WriteLine();// Radbrytning 
@@ -126,7 +126,7 @@ namespace _1DV402.S1._1.L01A
 
             if (resultat > 0)
             {
-                Console.WriteLine("Antal 50 lappar: " + resultat);
+                Console.WriteLine("Antal 50  lappar: " + resultat);
                 tillbaka = tillbaka % 50;
             }
 
@@ -134,7 +134,7 @@ namespace _1DV402.S1._1.L01A
 
             if (resultat > 0)
             {
-                Console.WriteLine("Antal 20 lappar: " + resultat);
+                Console.WriteLine("Antal 20  lappar: " + resultat);
                 tillbaka = tillbaka % 20;
             }
 
@@ -142,7 +142,7 @@ namespace _1DV402.S1._1.L01A
 
             if (resultat > 0)
             {
-                Console.WriteLine("Antal 5 kronor: " + resultat);
+                Console.WriteLine("Antal 5   kronor: " + resultat);
                 tillbaka = tillbaka % 5;
             }
 
@@ -150,7 +150,7 @@ namespace _1DV402.S1._1.L01A
 
             if (resultat > 0)
             {
-                Console.WriteLine("Antal 1 kronor: " + resultat);
+                Console.WriteLine("Antal 1   kronor: " + resultat);
                 tillbaka = tillbaka % 1;
             }
 
