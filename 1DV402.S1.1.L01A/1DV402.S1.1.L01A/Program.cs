@@ -156,7 +156,7 @@ namespace _1DV402.S1._1.L01A
 
             int slut = 0;
 
-            while (true)//stopar programmet och bär dig matat in 1 för att avsluta den  
+            while (true)//stopar programmet och ber dig matat in 1 för att avsluta den  
             {
                 try
                 {
